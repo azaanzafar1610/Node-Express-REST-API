@@ -1,1 +1,2 @@
 node_modules
+mongoose.connect('mongodb+srv://azaanzafar1610:Lol123lol786@cluster1.mvlmcie.mongodb.net/')

@@ -51,7 +51,7 @@ app.put('/products/:id', async(req,res)=>{
         if(!product){
             return res.status(404).json({message:`cannot find any product with id: ${id}`})
         }
-        const updatedProduct = await Product.findById(id)
+        const updatedProduct = await Product.findById(id) //or we can use .findByIdAndDelete(id)ws
         res.status(200).json(updatedProduct)
 
     } catch (error) {
@@ -87,7 +87,7 @@ app.listen(5000, ()=>{
 })
 
 
-mongoose.connect('mongodb+srv://azaanzafar1610:Lol123lol786@cluster1.mvlmcie.mongodb.net/')
+mongoose.connect('')
 .then(()=>{
     console.log('connected to mongoDB')
 }).catch((error)=>{
